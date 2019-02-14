@@ -6,8 +6,27 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@ConfigurationProperties("my")
-public class User {
+@ConfigurationProperties(prefix = "my")
+public class Users {
+    @Override
+    public String toString() {
+        return "Users{" +
+                "users=" + users +
+                '}';
+    }
+
+    private List<User> users;
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+}
+
+class User {
     private String name;
     private String address;
     private List<String> favorites;

@@ -7,7 +7,7 @@ server:
 
 my:
   users:
-   -  name: 江南一点雨
+    - name: 江南一点雨
       address: China
       favorites:
         - 足球

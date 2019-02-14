@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     @Autowired
-    User user;
+    Users users;
+
     @GetMapping("/user")
-    public String getUser(){
-        return user.toString();
+    public String getUser() {
+        return users.toString();
     }
 }
+
