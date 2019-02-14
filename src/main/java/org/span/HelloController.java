@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/hello")
     public String hello(){
+        System.out.println(new Book().getName());
         return "Hello Sprint boot";
+
     }
 }
